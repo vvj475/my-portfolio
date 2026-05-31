@@ -1,0 +1,823 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background: #ffffff;
+    color: #333333;
+}
+
+/* Hero Profile Image Styles */
+.profile-image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.hero-profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #2ecc71;
+    box-shadow: 0 10px 30px rgba(46,204,113,0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hero-profile-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(46,204,113,0.4);
+}
+
+.profile-name {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2ecc71;
+    letter-spacing: 1px;
+}
+
+/* Header and Navigation */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    z-index: 1000;
+    border-bottom: 2px solid #2ecc71;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-heading {
+    font-size: 1.8rem;
+    color: #2ecc71;
+}
+
+.menu-list {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.menu-list-items a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.menu-list-items a:hover {
+    color: #2ecc71;
+}
+
+/* Hamburger Menu (hidden by default) */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger-icon, .cross-icon {
+    font-size: 1.5rem;
+    color: #2ecc71;
+}
+
+.cross-icon {
+    display: none;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 50%, #e8f5e9 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #333333;
+    padding: 0 5%;
+    border-bottom: 1px solid #2ecc71;
+}
+
+.intro {
+    max-width: 800px;
+}
+
+.greet-heading {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #2ecc71;
+}
+
+.my-heading {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: #000000;
+}
+
+.sub-heading {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #666666;
+}
+
+.intro-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.btn {
+    padding: 12px 30px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(46,204,113,0.3);
+}
+
+.common-btn {
+    background: #2ecc71;
+    color: white;
+}
+
+.ghost-btn {
+    background: transparent;
+    color: #2ecc71;
+    border: 2px solid #2ecc71;
+}
+
+.ghost-btn:hover {
+    background: rgba(46,204,113,0.1);
+}
+
+/* Portfolio Section */
+.portfolio {
+    padding: 5rem 5%;
+    background: #ffffff;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.portfolio-heading {
+    margin-bottom: 3rem;
+}
+
+.portfolio-heading .my-heading {
+    color: #000000;
+}
+
+.my-row {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.my-col {
+    flex: 1;
+    min-width: 250px;
+}
+
+.my-card {
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #e0e0e0;
+}
+
+.my-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(46,204,113,0.15);
+    border-color: #2ecc71;
+}
+
+.port-card {
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+/* ======================================== */
+/* BLUE BACKGROUNDS FOR PORTFOLIO CARDS    */
+/* ======================================== */
+
+.image {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Computer Operator Card - Deep Blue Gradient */
+.my-row:first-child .my-col:nth-child(1) .image {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    padding: 40px 20px;
+}
+
+/* Technical Support Card - Dark Navy Gradient */
+.my-row:first-child .my-col:nth-child(2) .image {
+    background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+    padding: 40px 20px;
+}
+
+/* IT Consulting Card - Royal Blue to Cyan Gradient */
+.my-row:first-child .my-col:nth-child(3) .image {
+    background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
+    padding: 40px 20px;
+}
+
+/* Data Management Card - Deep Blue to Bright Blue Gradient */
+.my-row:last-child .my-col:nth-child(1) .image {
+    background: linear-gradient(135deg, #000428 0%, #004e92 100%);
+    padding: 40px 20px;
+}
+
+/* Microsoft Suite Card - Teal to Green Gradient */
+.my-row:last-child .my-col:nth-child(2) .image {
+    background: linear-gradient(135deg, #134e5e 0%, #71b280 100%);
+    padding: 40px 20px;
+}
+
+/* Cloud Server Card - Midnight Blue Gradient */
+.my-row:last-child .my-col:nth-child(3) .image {
+    background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+    padding: 40px 20px;
+}
+
+/* Style for the images inside blue backgrounds */
+.image img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #2ecc71;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    background: white;
+}
+
+.image img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 35px rgba(0,0,0,0.4);
+}
+
+/* Decorative radial overlay for blue backgrounds */
+.image::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 70%);
+    transform: rotate(45deg);
+    pointer-events: none;
+}
+
+/* Second decorative element - dots pattern */
+.image::after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 2px, transparent 2px);
+    background-size: 10px 10px;
+    pointer-events: none;
+    border-radius: 50%;
+}
+
+/* Text styling for portfolio cards */
+.port-card .greet-heading {
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    color: #2ecc71;
+}
+
+.port-card .small-para {
+    font-size: 0.9rem;
+    color: #666666;
+}
+
+.blue-text {
+    color: #2ecc71;
+}
+
+/* About Section */
+.about {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 5rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    background: #f9f9f9;
+    border-radius: 20px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text p {
+    margin-top: 1rem;
+    color: #666666;
+}
+
+.lead-para {
+    font-size: 1.1rem;
+    color: #333333;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    border: 2px solid #2ecc71;
+}
+
+/* Services Section */
+.services {
+    padding: 5rem 5%;
+    background: #ffffff;
+}
+
+.services-heading {
+    margin-bottom: 3rem;
+}
+
+.services-heading .my-heading {
+    color: #000000;
+}
+
+.services-content .my-card {
+    padding: 2rem;
+    text-align: center;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+}
+
+.services-content .my-card:hover {
+    border-color: #2ecc71;
+    box-shadow: 0 10px 30px rgba(46,204,113,0.1);
+}
+
+.icon {
+    font-size: 3rem;
+    color: #2ecc71;
+    margin-bottom: 1rem;
+}
+
+/* Contact Section */
+.contact {
+    padding: 5rem 5%;
+    background: #f9f9f9;
+}
+
+.contact-heading {
+    margin-bottom: 3rem;
+}
+
+.contact-heading .my-heading {
+    color: #000000;
+}
+
+.contact-content {
+    display: flex;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.contact-form-container, .contact-details {
+    flex: 1;
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid #e0e0e0;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contact-form-container:hover, .contact-details:hover {
+    border-color: #2ecc71;
+    box-shadow: 0 10px 30px rgba(46,204,113,0.1);
+}
+
+.greet-heading {
+    margin-bottom: 1.5rem;
+    color: #2ecc71;
+}
+
+.form-controls {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #ffffff;
+    color: #333333;
+}
+
+.form-controls:focus {
+    outline: none;
+    border-color: #2ecc71;
+    box-shadow: 0 0 5px rgba(46,204,113,0.3);
+}
+
+textarea.form-controls {
+    resize: vertical;
+}
+
+.form-btn {
+    width: 100%;
+    background: #2ecc71;
+    color: white;
+}
+
+.details {
+    margin-bottom: 1.5rem;
+}
+
+.contact-heading {
+    color: #2ecc71;
+    margin-bottom: 0.5rem;
+}
+
+.contact-text {
+    color: #666666;
+}
+
+/* Service Learning Project Section */
+.service-project {
+    padding: 5rem 5%;
+    background: #ffffff;
+}
+
+.project-heading {
+    margin-bottom: 3rem;
+}
+
+.project-heading .my-heading {
+    color: #000000;
+}
+
+.project-intro {
+    margin-bottom: 3rem;
+}
+
+.project-intro h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #2ecc71;
+}
+
+.project-details {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    flex: 1;
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s, border-color 0.3s;
+    border: 1px solid #e0e0e0;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #2ecc71;
+    box-shadow: 0 10px 30px rgba(46,204,113,0.1);
+}
+
+.project-card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-card h3 {
+    margin-bottom: 1rem;
+    color: #2ecc71;
+}
+
+.project-card p {
+    color: #666666;
+    line-height: 1.6;
+}
+
+.service-project .my-card {
+    height: 100%;
+    background: #ffffff;
+}
+
+.service-project .my-card p {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+    color: #666666;
+}
+
+/* Footer */
+.footer {
+    background: #000000;
+    color: #ffffff;
+    padding: 2rem;
+    border-top: 3px solid #2ecc71;
+}
+
+.footer-content h4 {
+    font-weight: normal;
+    margin-bottom: 1rem;
+    color: #cccccc;
+}
+
+.footer-menu-list {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.footer-links {
+    color: #ffffff;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.footer-links:hover {
+    color: #2ecc71;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Active Navigation Link */
+.menu-list-items a.active {
+    color: #2ecc71 !important;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.my-card, .project-card {
+    animation: fadeInUp 0.6s ease;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2ecc71;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #27ae60;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .my-heading {
+        font-size: 2.5rem;
+    }
+    
+    .my-row {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .contact-content {
+        flex-direction: column;
+    }
+    
+    .portfolio-content .my-row {
+        flex-direction: column;
+    }
+    
+    .project-details {
+        flex-direction: column;
+    }
+    
+    .project-card {
+        margin-bottom: 1rem;
+    }
+    
+    /* Profile image responsive */
+    .hero-profile-image {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .profile-name {
+        font-size: 1rem;
+    }
+    
+    /* Portfolio images responsive */
+    .image img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .image {
+        padding: 30px 20px !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: #ffffff;
+        transition: left 0.3s;
+        z-index: 999;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .menu.active {
+        left: 0;
+    }
+    
+    .menu-list {
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+        gap: 1.5rem;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+    
+    .hamburger.active .hamburger-icon {
+        display: none;
+    }
+    
+    .hamburger.active .cross-icon {
+        display: inline;
+    }
+    
+    .my-heading {
+        font-size: 2rem;
+    }
+    
+    .greet-heading {
+        font-size: 1.2rem;
+    }
+    
+    .sub-heading {
+        font-size: 1rem;
+    }
+    
+    .intro-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+    
+    .portfolio {
+        padding: 3rem 5%;
+    }
+    
+    .my-col {
+        min-width: 100%;
+    }
+    
+    .services {
+        padding: 3rem 5%;
+    }
+    
+    .services-content .my-card {
+        padding: 1.5rem;
+    }
+    
+    .contact {
+        padding: 3rem 5%;
+    }
+    
+    .form-controls {
+        font-size: 0.9rem;
+    }
+    
+    .footer-menu-list {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    .footer-content h4 {
+        font-size: 0.9rem;
+    }
+    
+    /* Profile image responsive for mobile */
+    .hero-profile-image {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .profile-name {
+        font-size: 0.9rem;
+    }
+    
+    /* Portfolio images responsive for mobile */
+    .image img {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .image {
+        padding: 25px 15px !important;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .my-heading {
+        font-size: 1.5rem;
+    }
+    
+    .logo-heading {
+        font-size: 1.3rem;
+    }
+    
+    .image img {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .image {
+        padding: 20px 15px !important;
+    }
+}
+
+/* Spiritual Dashboard Link Styles */
+.menu-list-items a[href="spiritual-dashboard.html"] {
+    color: #2ecc71;
+    font-weight: 600;
+}
+
+.menu-list-items a[href="spiritual-dashboard.html"]:hover {
+    color: #27ae60;
+    text-shadow: 0 0 5px rgba(46,204,113,0.3);
+}
