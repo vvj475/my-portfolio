@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Growth Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #fff5e6;
+            color: #333;
+        }
+        
+        .nav-bar {
+            background: #e67e22;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 30px;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        
+        .nav-links a:hover {
+            background: #c0392b;
+        }
+        
+        .nav-links a.active {
+            background: #c0392b;
+            font-weight: bold;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .professional-section {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-left: 5px solid #e67e22;
+        }
+        
+        h1 {
+            color: #e67e22;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        
+        h2 {
+            color: #e67e22;
+            margin: 30px 0 15px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        
+        h3 {
+            color: #e67e22;
+            margin: 20px 0 10px 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background: #fff5e6;
+            color: #e67e22;
+            font-weight: bold;
+        }
+        
+        tr:hover {
+            background: #f9f9f9;
+        }
+        
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+        
+        li {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+        
+        .skill-badge {
+            display: inline-block;
+            background: #e67e22;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            margin: 5px;
+        }
+        
+        .back-home {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            background: #e67e22;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+        
+        .back-home:hover {
+            background: #c0392b;
+        }
+        
+        @media (max-width: 768px) {
+            .professional-section {
+                padding: 20px;
+            }
+            
+            table, th, td {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-bar">
+        <div class="nav-container">
+            <div style="color: white; font-weight: bold;">My Portfolio</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="spiritual.html">Spiritual</a>
+                <a href="professional.html" class="active">Professional</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="professional-section">
+            <h1>💼 Professional Growth Portfolio</h1>
+            <div class="subtitle">Focus: My IT skills, certifications, projects, and career trajectory</div>
+            
+            <h2>🔧 Technical Competencies</h2>
+            <table>
+                <tr>
+                    <th>Skill</th>
+                    <th>Proficiency</th>
+                    <th>Evidence</th>
+                </tr>
+                <tr>
+                    <td>Firewall configuration</td>
+                    <td>Intermediate</td>
+                    <td>Set up home lab with pfSense</td>
+                </tr>
+                <tr>
+                    <td>User support & training</td>
+                    <td>Advanced</td>
+                    <td>"Tech Skills for Life" workshop</td>
+                </tr>
+                <tr>
+                    <td>Security protocols</td>
+                    <td>Learning</td>
+                    <td>Completed LinkedIn Learning course</td>
+                </tr>
+                <tr>
+                    <td>Network troubleshooting</td>
+                    <td>Intermediate</td>
+                    <td>Resolved 50+ tickets in training environment</td>
+                </tr>
+                <tr>
+                    <td>Virtualization</td>
+                    <td>Beginner-Intermediate</td>
+                    <td>Home lab with Windows Server & Linux</td>
+                </tr>
+            </table>
+            
+            <h2>📜 Certifications & Training</h2>
+            <ul>
+                <li><strong>CompTIA A+</strong> - In progress (exam scheduled for [insert date])</li>
+                <li><strong>Google IT Support Certificate</strong> - Completed [insert date]</li>
+                <li><strong>Security+</strong> - Planned for Q4 2026</li>
+                <li><strong>LinkedIn Learning: Cybersecurity Foundations</strong> - Completed</li>
+            </ul>
+            
+            <h2>🛠️ Key Projects</h2>
+            <ul>
+                <li><strong>Tech Skills for Life workshop</strong><br>
+                    15 youth trained, 90% reported less tech anxiety. Created curriculum and hands-on exercises.</li>
+                <li><strong>Home Lab Environment</strong><br>
+                    Virtualized environment with pfSense firewall, Windows Server 2019, and Ubuntu Linux.</li>
+                <li><strong>Help Desk Simulation</strong><br>
+                    Resolved 50+ mock tickets including password resets, network connectivity, and software installation.</li>
+            </ul>
+            
+            <h2>📊 Professional Goals (Next 12 Months)</h2>
+            <ol>
+                <li>Earn CompTIA A+ certification (by [insert date])</li>
+                <li>Land first IT support role or internship</li>
+                <li>Build 3 more real-world projects for portfolio:
+                    <ul>
+                        <li>Active Directory home lab</li>
+                        <li>Scripting project (PowerShell or Python)</li>
+                        <li>Volunteer IT support for non-profit</li>
+                    </ul>
+                </li>
+                <li>Attend one IT conference or local tech meetup</li>
+            </ol>
+            
+            <h2>🎯 Skills I'm Currently Developing</h2>
+            <div>
+                <span class="skill-badge">Active Directory</span>
+                <span class="skill-badge">PowerShell</span>
+                <span class="skill-badge">Python basics</span>
+                <span class="skill-badge">Cloud fundamentals (AWS/Azure)</span>
+                <span class="skill-badge">Network+ concepts</span>
+            </div>
+            
+            <h2>🔗 How My Faith and IT Career Are One</h2>
+            <ul>
+                <li>When I set up a firewall → I am protecting people as if they were my own family.</li>
+                <li>When I teach youth in my workshop → I am helping them belong in the digital world.</li>
+                <li>When I am tempted to cut corners → I remember my ethical reflection.</li>
+                <li>When I update my portfolio → I include both my skills AND my faith because they are one.</li>
+            </ul>
+            
+            <p style="font-style: italic; margin-top: 20px; text-align: center; color: #e67e22;">
+                "I say unto you, be one; and if ye are not one ye are not mine." — Doctrine and Covenants 38:27
+            </p>
+            
+            <a href="index.html" class="back-home">← Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>
